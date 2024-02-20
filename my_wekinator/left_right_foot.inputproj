@@ -147,25 +147,477 @@
   <outputs>
     <outputs class="linked-list">
       <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>trigger</name>
+        <expression class="expr.BinaryExpr">
+          <variablesUsed>
+            <string>inputs_127</string>
+            <string>inputs_131</string>
+          </variablesUsed>
+          <rator>15</rator>
+          <rand0 class="expr.BinaryExpr">
+            <rator>8</rator>
+            <rand0 class="expr.Variable">
+              <variablesUsed>
+                <string>inputs_127</string>
+              </variablesUsed>
+              <name>inputs_127</name>
+              <val>2.4839463233947754</val>
+            </rand0>
+            <rand1 class="expr.LiteralExpr">
+              <v>0.7</v>
+            </rand1>
+          </rand0>
+          <rand1 class="expr.BinaryExpr">
+            <rator>8</rator>
+            <rand0 class="expr.Variable">
+              <variablesUsed>
+                <string>inputs_131</string>
+              </variablesUsed>
+              <name>inputs_131</name>
+              <val>2.4643728733062744</val>
+            </rand0>
+            <rand1 class="expr.LiteralExpr">
+              <v>0.7</v>
+            </rand1>
+          </rand1>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression/rand0/rand0"/>
+          <expr.Variable reference="../../expression/rand1/rand0"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_127</originalVariable>
+            <unindexedName>inputs_127</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_131</originalVariable>
+            <unindexedName>inputs_131</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>126</int>
+          <int>130</int>
+        </indexes>
+        <originalString>(inputs_127 &lt; 0.7) or (inputs_131 &lt; 0.7)</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.ExpressionInput>
         <name>right_foot</name>
         <expression class="expr.BinaryExpr">
           <variablesUsed>
             <string>inputs_127</string>
           </variablesUsed>
           <rator>8</rator>
-          <rand0 class="expr.Variable">
-            <variablesUsed>
-              <string>inputs_127</string>
-            </variablesUsed>
-            <name>inputs_127</name>
-            <val>3.562018394470215</val>
-          </rand0>
+          <rand0 class="expr.Variable" reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0/rand0"/>
           <rand1 class="expr.LiteralExpr">
-            <v>0.5</v>
+            <v>0.7</v>
           </rand1>
         </expression>
         <variables>
-          <expr.Variable reference="../../expression/rand0"/>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0/rand0"/>
         </variables>
         <indexedVariables>
           <wekiinputhelper.Modifiers.IndexedVar>
@@ -177,7 +629,7 @@
         <indexes>
           <int>126</int>
         </indexes>
-        <originalString>inputs_127 &lt; 0.5</originalString>
+        <originalString>inputs_127 &lt; 0.7</originalString>
         <buffersForInputs>
           <wekiinputhelper.Modifiers.CircularBuffer>
             <length>1</length>
@@ -582,9 +1034,9 @@
       </wekiinputhelper.Modifiers.ExpressionInput>
       <wekiinputhelper.Modifiers.ExpressionInput>
         <name>right_root_y</name>
-        <expression class="expr.Variable" reference="../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0"/>
+        <expression class="expr.Variable" reference="../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0/rand0"/>
         <variables>
-          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0"/>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand0/rand0"/>
         </variables>
         <indexedVariables>
           <wekiinputhelper.Modifiers.IndexedVar>
@@ -1006,19 +1458,13 @@
             <string>inputs_131</string>
           </variablesUsed>
           <rator>8</rator>
-          <rand0 class="expr.Variable">
-            <variablesUsed>
-              <string>inputs_131</string>
-            </variablesUsed>
-            <name>inputs_131</name>
-            <val>3.5652003288269043</val>
-          </rand0>
+          <rand0 class="expr.Variable" reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand1/rand0"/>
           <rand1 class="expr.LiteralExpr">
-            <v>0.5</v>
+            <v>0.7</v>
           </rand1>
         </expression>
         <variables>
-          <expr.Variable reference="../../expression/rand0"/>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand1/rand0"/>
         </variables>
         <indexedVariables>
           <wekiinputhelper.Modifiers.IndexedVar>
@@ -1030,7 +1476,7 @@
         <indexes>
           <int>130</int>
         </indexes>
-        <originalString>inputs_131 &lt; 0.5</originalString>
+        <originalString>inputs_131 &lt; 0.7</originalString>
         <buffersForInputs>
           <wekiinputhelper.Modifiers.CircularBuffer>
             <length>1</length>
@@ -1435,9 +1881,9 @@
       </wekiinputhelper.Modifiers.ExpressionInput>
       <wekiinputhelper.Modifiers.ExpressionInput>
         <name>left_foot_y</name>
-        <expression class="expr.Variable" reference="../../wekiinputhelper.Modifiers.ExpressionInput[3]/expression/rand0"/>
+        <expression class="expr.Variable" reference="../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand1/rand0"/>
         <variables>
-          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput[3]/expression/rand0"/>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression/rand1/rand0"/>
         </variables>
         <indexedVariables>
           <wekiinputhelper.Modifiers.IndexedVar>
@@ -1853,17 +2299,17 @@
         </buffersForInputs>
       </wekiinputhelper.Modifiers.ExpressionInput>
     </outputs>
-    <numOutputTypes>4</numOutputTypes>
-    <dimensionality>4</dimensionality>
+    <numOutputTypes>5</numOutputTypes>
+    <dimensionality>5</dimensionality>
     <hasDependencies>false</hasDependencies>
   </outputs>
   <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
     <c>
-      <type>NONE</type>
+      <type>GREATER_THAN</type>
       <howLong>ONCE</howLong>
       <index>0</index>
       <val>0.0</val>
-      <appliesTo>INPUT</appliesTo>
+      <appliesTo>OUTPUT</appliesTo>
     </c>
   </inputTriggerer>
   <isSendingOriginalInputs>false</isSendingOriginalInputs>

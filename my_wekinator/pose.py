@@ -10,7 +10,7 @@ from pythonosc.osc_message_builder import OscMessageBuilder
 from utils import add_default_args, get_video_input
 
 OSC_ADDRESS = "/wek/inputs"
-
+# to run: python pose.py --input 0 --port 6448     
 
 def draw_pose_rect(image, rect, color=(255, 0, 255), thickness=2):
     image_width = image.shape[1]
