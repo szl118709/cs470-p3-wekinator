@@ -70,12 +70,15 @@ void draw()
         cam.read();
     }
 
+    pushMatrix();
     // draw the image
-    image(cam, 0, 0);
+    scale(-1,1);
+    image(cam, -width, 0);
     // get the image
     PImage img = get();
     // resize by commonFactor in each dimension
     img.resize( width / commonFactor, height / commonFactor );
+    popMatrix();
 
     // make a new OSC message for sending
     OscMessage msg = new OscMessage("/wek/inputs");

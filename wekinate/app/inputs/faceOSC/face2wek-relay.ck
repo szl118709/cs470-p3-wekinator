@@ -80,6 +80,9 @@ fun void incoming()
                 // (optional) could normalize here
                 // Math.remap( MOUTH_HEIGHT, MOUTH_HEIGHT_MIN, MOUTH_HEIGHT_MAX, 0, 1 ) => MOUTH_HEIGHT;
             }
+            else if ( msg.address == "/hands/arr" ) {
+                msg.numArgs() => num_args;
+            }
         }
         
         // reformat and relay message to Wekinator
@@ -95,7 +98,7 @@ fun void send2wek()
     
     // print
     cherr <= "  *** SENDING: \"/wek/inputs/\": "
-          <= MOUTH_WIDTH <= " " <= MOUTH_HEIGHT <= IO.newline();
+          <= num_args <= " " <= MOUTH_HEIGHT <= IO.newline();
 
     // add each for sending
     MOUTH_WIDTH => xmit.add;
