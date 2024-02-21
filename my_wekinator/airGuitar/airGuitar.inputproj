@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<WekiInputHelperFileData>
+  <oscReceivePort>6448</oscReceivePort>
+  <oscSendPort>6449</oscSendPort>
+  <sendHostname>localhost</sendHostname>
+  <sendOscMessage>/wek/inputs</sendOscMessage>
+  <inputs>
+    <oscMessage>/wek/inputs</oscMessage>
+    <numInputs>2</numInputs>
+    <groupName>Inputs</groupName>
+    <inputNames>
+      <string>inputs_1</string>
+      <string>inputs_2</string>
+    </inputNames>
+  </inputs>
+  <outputs>
+    <outputs class="linked-list">
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>lefthand</name>
+        <expression class="expr.Variable">
+          <variablesUsed>
+            <string>inputs_1</string>
+          </variablesUsed>
+          <name>inputs_1</name>
+          <val>0.0</val>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_1</originalVariable>
+            <unindexedName>inputs_1</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>0</int>
+        </indexes>
+        <originalString>inputs_1</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.SecondOrderDifference>
+        <name>inputs_2_2ndOrderDiff</name>
+        <index>1</index>
+      </wekiinputhelper.Modifiers.SecondOrderDifference>
+    </outputs>
+    <numOutputTypes>2</numOutputTypes>
+    <dimensionality>2</dimensionality>
+    <hasDependencies>false</hasDependencies>
+  </outputs>
+  <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
+    <c>
+      <type>GREATER_THAN</type>
+      <howLong>ONCE</howLong>
+      <index>1</index>
+      <val>50.0</val>
+      <appliesTo>OUTPUT</appliesTo>
+    </c>
+  </inputTriggerer>
+  <isSendingOriginalInputs>false</isSendingOriginalInputs>
+</WekiInputHelperFileData>
