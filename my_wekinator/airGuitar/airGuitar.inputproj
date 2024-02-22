@@ -22,7 +22,7 @@
             <string>inputs_1</string>
           </variablesUsed>
           <name>inputs_1</name>
-          <val>0.0</val>
+          <val>395.5289611816406</val>
         </expression>
         <variables>
           <expr.Variable reference="../../expression"/>
@@ -47,10 +47,10 @@
           </wekiinputhelper.Modifiers.CircularBuffer>
         </buffersForInputs>
       </wekiinputhelper.Modifiers.ExpressionInput>
-      <wekiinputhelper.Modifiers.SecondOrderDifference>
-        <name>inputs_2_2ndOrderDiff</name>
+      <wekiinputhelper.Modifiers.FirstOrderDifference>
+        <name>inputs_2_1stOrderDiff</name>
         <index>1</index>
-      </wekiinputhelper.Modifiers.SecondOrderDifference>
+      </wekiinputhelper.Modifiers.FirstOrderDifference>
     </outputs>
     <numOutputTypes>2</numOutputTypes>
     <dimensionality>2</dimensionality>

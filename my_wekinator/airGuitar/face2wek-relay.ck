@@ -63,19 +63,20 @@ fun void incoming()
         while( oin.recv(msg) )
         {         
             // print message type
-            cherr <= "RECEIVED: \"" <= msg.address <= "\": ";        
+            // cherr <= "RECEIVED: \"" <= msg.address <= "\": ";        
             // print arguments
-            printArgs( msg );
+            // printArgs( msg );
             
             // handle message
             if ( msg.address == "/hands/arr" ) {
                 msg.numArgs() => NUM_ARGS;
                 HANDS_Y.reset();
-                HANDS_Y << msg.getFloat(5);
-                HANDS_Y << msg.getFloat(3 + 64 + 23);
-                // for (int i; i+14 < NUM_ARGS; 67 +=> i) {
-                //     HANDS_Y << msg.getFloat(i+14);
-                // }
+                // meta offset + hand offset + 3 * index + x/y/z
+                HANDS_Y << msg.getFloat(3 + 1 + 3 * 9 + 1); // left palm middle y
+                HANDS_Y << msg.getFloat(3 + 1 + 3 * 12 + 1); // left middle finger tip y
+                HANDS_Y << msg.getFloat(3 + 64 + 1 + 3 * 9 + 1); // right palm middle y
+                HANDS_Y << msg.getFloat(3 + 64 + 1 + 3 * 9 + 0); // right palm middle x
+                HANDS_Y << msg.getFloat(3 + 64 + 1 + 3 * 12 + 0); // right middle finger tip x
             }
         }
         
@@ -127,5 +128,5 @@ fun void printArgs( OscMsg msg )
     }       
     
     // new line
-    cherr <= IO.newline();
+    // cherr <= IO.newline();
 }
