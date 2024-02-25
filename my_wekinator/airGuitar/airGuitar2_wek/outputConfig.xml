@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<OSCOutputGroup>
+  <oscMessage>/wek/outputs</oscMessage>
+  <hostName>localhost</hostName>
+  <outputPort>12000</outputPort>
+  <outputs class="linked-list">
+    <wekimini.osc.OSCClassificationOutput>
+      <name>left_class</name>
+      <numClasses>10</numClasses>
+      <isSendingDistribution>false</isSendingDistribution>
+    </wekimini.osc.OSCClassificationOutput>
+    <wekimini.osc.OSCClassificationOutput>
+      <name>right_class</name>
+      <numClasses>10</numClasses>
+      <isSendingDistribution>false</isSendingDistribution>
+    </wekimini.osc.OSCClassificationOutput>
+    <wekimini.osc.OSCNumericOutput>
+      <name>right_vel</name>
+      <min>0.0</min>
+      <max>1.0</max>
+      <outputType>REAL</outputType>
+      <limitType>SOFT</limitType>
+      <trainingDataLimitRestriction>DONT_ENFORCE_LIMITS</trainingDataLimitRestriction>
+      <trainingDataIntegerRestriction>DONT_ENFORCE_INTEGER</trainingDataIntegerRestriction>
+    </wekimini.osc.OSCNumericOutput>
+  </outputs>
+</OSCOutputGroup>

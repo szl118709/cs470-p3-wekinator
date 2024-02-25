@@ -78,11 +78,12 @@ fun void incoming()
                         HANDS_Y << msg.getFloat(i);
                     }
                 }
-                for (68 => int i; i < 131; i++) {
+                for (68 => int i; i < 129; i++) {
                     if ((i + 2)% 3 != 0) {
                         HANDS_Y << msg.getFloat(i);
                     }
                 }
+                HANDS_Y << msg.getFloat(3 + 1 + 3 * 0 + 1) - msg.getFloat(3 + 1 + 3 * 9 + 1); // left palm middle z
                 <<<HANDS_Y.size()>>>;
             }
         }

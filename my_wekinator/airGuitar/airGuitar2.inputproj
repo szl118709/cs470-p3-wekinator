@@ -98,8 +98,8 @@
   <outputs>
     <outputs class="linked-list">
       <wekiinputhelper.Modifiers.FirstOrderDifference>
-        <name>inputs_53_1stOrderDiff</name>
-        <index>52</index>
+        <name>inputs_50_1stOrderDiff</name>
+        <index>49</index>
       </wekiinputhelper.Modifiers.FirstOrderDifference>
     </outputs>
     <numOutputTypes>1</numOutputTypes>
