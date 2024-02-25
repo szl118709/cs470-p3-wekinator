@@ -18,100 +18,18 @@
   </inputs>
   <outputs>
     <outputs class="linked-list">
-      <wekiinputhelper.Modifiers.ExpressionInput>
-        <name>left_palm_y</name>
-        <expression class="expr.Variable">
-          <variablesUsed>
-            <string>inputs_1</string>
-          </variablesUsed>
-          <name>inputs_1</name>
-          <val>0.0</val>
-        </expression>
-        <variables>
-          <expr.Variable reference="../../expression"/>
-        </variables>
-        <indexedVariables>
-          <wekiinputhelper.Modifiers.IndexedVar>
-            <originalVariable>inputs_1</originalVariable>
-            <unindexedName>inputs_1</unindexedName>
-            <delay>0</delay>
-          </wekiinputhelper.Modifiers.IndexedVar>
-        </indexedVariables>
-        <indexes>
-          <int>0</int>
-        </indexes>
-        <originalString>inputs_1</originalString>
-        <buffersForInputs>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-        </buffersForInputs>
-      </wekiinputhelper.Modifiers.ExpressionInput>
-      <wekiinputhelper.Modifiers.ExpressionInput>
-        <name>left_diff_y</name>
-        <expression class="expr.BinaryExpr">
-          <variablesUsed>
-            <string>inputs_2</string>
-            <string>inputs_1</string>
-          </variablesUsed>
-          <rator>1</rator>
-          <rand0 class="expr.Variable" reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
-          <rand1 class="expr.Variable">
-            <name>inputs_2</name>
-            <val>0.0</val>
-          </rand1>
-        </expression>
-        <variables>
-          <expr.Variable reference="../../expression/rand1"/>
-          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
-        </variables>
-        <indexedVariables>
-          <wekiinputhelper.Modifiers.IndexedVar>
-            <originalVariable>inputs_2</originalVariable>
-            <unindexedName>inputs_2</unindexedName>
-            <delay>0</delay>
-          </wekiinputhelper.Modifiers.IndexedVar>
-          <wekiinputhelper.Modifiers.IndexedVar>
-            <originalVariable>inputs_1</originalVariable>
-            <unindexedName>inputs_1</unindexedName>
-            <delay>0</delay>
-          </wekiinputhelper.Modifiers.IndexedVar>
-        </indexedVariables>
-        <indexes>
-          <int>1</int>
-          <int>0</int>
-        </indexes>
-        <originalString>inputs_1 - inputs_2</originalString>
-        <buffersForInputs>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-          <wekiinputhelper.Modifiers.CircularBuffer>
-            <length>1</length>
-          </wekiinputhelper.Modifiers.CircularBuffer>
-        </buffersForInputs>
-      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.WindowedOperation>
+        <name>inputs_1_Avg3</name>
+        <index>0</index>
+        <windowSize>3</windowSize>
+        <op class="wekiinputhelper.Modifiers.AverageWindowOperation"/>
+      </wekiinputhelper.Modifiers.WindowedOperation>
+      <wekiinputhelper.Modifiers.WindowedOperation>
+        <name>inputs_2_Avg3</name>
+        <index>1</index>
+        <windowSize>3</windowSize>
+        <op class="wekiinputhelper.Modifiers.AverageWindowOperation"/>
+      </wekiinputhelper.Modifiers.WindowedOperation>
       <wekiinputhelper.Modifiers.ExpressionInput>
         <name>right_palm_y</name>
         <expression class="expr.Variable">
@@ -223,7 +141,7 @@
       <type>GREATER_THAN</type>
       <howLong>ONCE</howLong>
       <index>4</index>
-      <val>30.0</val>
+      <val>20.0</val>
       <appliesTo>OUTPUT</appliesTo>
     </c>
   </inputTriggerer>

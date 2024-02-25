@@ -31,7 +31,7 @@
 
 // quarter note duration
 0.35::second => dur playing_time;
-0.4::second => dur waiting_time;
+0.3::second => dur waiting_time;
 // pitch of third note in power chord (try 0, -12, 12)
 0  => int OFFSET;
 // controls the attack; set to 0 for hevymetl attack
@@ -115,13 +115,13 @@ OscMsg msg;
 12000 => oscin.port;
 
 // listen for "/wek/output" message with 5 floats coming in
-oscin.addAddress( "/wek/outputs, fff" );
+oscin.addAddress( "/wek/outputs, f" );
 // print
 <<< "listening for OSC message from Wekinator on port 12000...", "" >>>;
 <<< " |- expecting \"/wek/outputs\" with 2 continuous parameters...", "" >>>; 
 
 // expecting 5 output dimensions
-2 => int NUM_PARAMS;
+1 => int NUM_PARAMS;
 float myParams[NUM_PARAMS];
 
 // envelopes for smoothing parameters
