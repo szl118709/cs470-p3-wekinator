@@ -30,14 +30,10 @@
 //----------------------------------------------------------------------------
 
 // quarter note duration
-0.35::second => dur playing_time;
-0.2::second => dur waiting_time;
-// pitch of third note in power chord (try 0, -12, 12)
-0  => int OFFSET;
+0.4::second => dur playing_time;
+0.3::second => dur waiting_time;
 // controls the attack; set to 0 for hevymetl attack
 1 => int USE_ENV;
-// set to 0 for clean chords; 1 for feedback echo
-1 => int DO_ECHO;
 
 0.8 => float vel;
 0 => int curr_chord;
@@ -50,15 +46,17 @@ HevyMetl h[numNotes];
 // high pass (for echoes)
 HPF hpf[numNotes];
 // reverb
-NRev r => dac; .5 => dac.gain;
+NRev r => dac; 
+.8 => dac.gain;
 // reverb mix
-0.1 => r.mix;
+0.05 => r.mix;
 
 // FM operator envelope indices
-[31,31,31,31] @=> int attacks[]; // [18,14,15,15] from patch
+[30,30,30,30] @=> int attacks[]; // [18,14,15,15] from patch
 [31,31,31,31] @=> int decays[];  // [31,31,26,31] from patch
-[15,15,15,10] @=> int sustains[]; // [15,15,13,15] from patch
-[31,31,31,31] @=> int releases[]; // [8,8,8,8] from patch
+[14,14,14,10] @=> int sustains[]; // [15,15,13,15] from patch
+[15,15,15,15] @=> int releases[]; // [8,8,8,8] from patch
+
 
 // connect
 for( int i; i < numNotes; i++ )
@@ -96,13 +94,13 @@ fun void playChord()
     for( 0 => int i; i < numNotes; i++ )
     { vel => h[i].noteOn; }
     // sound
-    0.85*(playing_time) => now;
+    0.7*(playing_time) => now;
     
     // note off
     for( 0 => int i; i < numNotes; i++ )
     { 1 => h[i].noteOff; }
     // let ring
-    0.15*(playing_time) => now;
+    0.3*(playing_time) => now;
 }
 
 
@@ -118,7 +116,7 @@ OscMsg msg;
 oscin.addAddress( "/wek/outputs, fff" );
 // print
 <<< "listening for OSC message from Wekinator on port 12000...", "" >>>;
-<<< " |- expecting \"/wek/outputs\" with 2 continuous parameters...", "" >>>; 
+<<< " |- expecting \"/wek/outputs\" with 3 parameters...", "" >>>; 
 
 // expecting 5 output dimensions
 3 => int NUM_PARAMS;
@@ -160,7 +158,7 @@ fun void setParams( float params[] )
         // mappings
         myParams[0] $ int - 1 => curr_chord;
         <<< curr_chord >>>;
-        myParams[2] * 0.5 => vel;
+        myParams[2]=> vel;
         // 10::ms => now;
     }
 
@@ -202,13 +200,6 @@ fun void waitForEvent()
                 }                
             }         
         }
-        // <<<msg_count>>>;
-        // <<<p>>>;
-        // for( int i; i < NUM_PARAMS; i++ ) {
-        //     <<<p[i]>>>;
-        //     msg_count /=> p[i];
-        //     Math.round(p[i]) => p[i];
-        // }
 
         setParams( p );
 

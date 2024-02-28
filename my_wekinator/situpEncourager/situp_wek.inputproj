@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<WekiInputHelperFileData>
+  <oscReceivePort>6448</oscReceivePort>
+  <oscSendPort>6449</oscSendPort>
+  <sendHostname>localhost</sendHostname>
+  <sendOscMessage>/wek/inputs</sendOscMessage>
+  <inputs>
+    <oscMessage>/wek/inputs</oscMessage>
+    <numInputs>2</numInputs>
+    <groupName>Inputs</groupName>
+    <inputNames>
+      <string>inputs_1</string>
+      <string>inputs_2</string>
+    </inputNames>
+  </inputs>
+  <outputs>
+    <outputs class="linked-list">
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>gain</name>
+        <expression class="expr.Variable">
+          <variablesUsed>
+            <string>inputs_2</string>
+          </variablesUsed>
+          <name>inputs_2</name>
+          <val>4.544168949127197</val>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_2</originalVariable>
+            <unindexedName>inputs_2</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>1</int>
+        </indexes>
+        <originalString>inputs_2</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>expression3</name>
+        <expression class="expr.BinaryExpr">
+          <variablesUsed>
+            <string>inputs_2</string>
+            <string>inputs_1</string>
+          </variablesUsed>
+          <rator>14</rator>
+          <rand0 class="expr.BinaryExpr">
+            <rator>13</rator>
+            <rand0 class="expr.Variable">
+              <name>inputs_1</name>
+              <val>1.0</val>
+            </rand0>
+            <rand1 class="expr.LiteralExpr">
+              <v>0.0</v>
+            </rand1>
+          </rand0>
+          <rand1 class="expr.BinaryExpr">
+            <rator>13</rator>
+            <rand0 class="expr.Variable" reference="../../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
+            <rand1 class="expr.LiteralExpr">
+              <v>1.4</v>
+            </rand1>
+          </rand1>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
+          <expr.Variable reference="../../expression/rand0/rand0"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_2</originalVariable>
+            <unindexedName>inputs_2</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>inputs_1</originalVariable>
+            <unindexedName>inputs_1</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>1</int>
+          <int>0</int>
+        </indexes>
+        <originalString>(inputs_1 &gt; 0) and (inputs_2 &gt; 1.4)</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+    </outputs>
+    <numOutputTypes>2</numOutputTypes>
+    <dimensionality>2</dimensionality>
+    <hasDependencies>false</hasDependencies>
+  </outputs>
+  <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
+    <c>
+      <type>NONE</type>
+      <howLong>ONCE</howLong>
+      <index>0</index>
+      <val>0.0</val>
+      <appliesTo>INPUT</appliesTo>
+    </c>
+  </inputTriggerer>
+  <isSendingOriginalInputs>false</isSendingOriginalInputs>
+</WekiInputHelperFileData>

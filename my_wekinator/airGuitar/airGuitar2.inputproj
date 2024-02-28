@@ -111,13 +111,13 @@
       <type>GREATER_THAN</type>
       <howLong>ONCE</howLong>
       <index>0</index>
-      <val>5.0</val>
+      <val>10.0</val>
       <appliesTo>OUTPUT</appliesTo>
     </c>
     <runningListener class="wekiinputhelper.InputTriggerer$1">
       <outer-class class="wekiinputhelper.TriggerOnTimes" reference="../.."/>
     </runningListener>
-    <numMs>100</numMs>
+    <numMs>50</numMs>
   </inputTriggerer>
   <isSendingOriginalInputs>true</isSendingOriginalInputs>
 </WekiInputHelperFileData>
