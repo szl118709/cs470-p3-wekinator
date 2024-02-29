@@ -29,7 +29,7 @@ xmit.dest( hostname, port );
 
 // storage for msg
 int NUM_ARGS;
-float HANDS_Y[2];
+float POSE[34];
 
 // print
 cherr <= "listening for messages on port " <= oin.port()
@@ -61,28 +61,23 @@ fun void incoming()
         while( oin.recv(msg) )
         {         
             // print message type
-            // cherr <= "RECEIVED: \"" <= msg.address <= "\": ";        
+            cherr <= "RECEIVED: \"" <= msg.address <= "\": ";        
             // print arguments
-            // printArgs( msg );
+            printArgs( msg );
             
             // handle message
-            if ( msg.address == "/hands/arr" ) {
+            if ( msg.address == "/poses/arr" ) {
                 msg.numArgs() => NUM_ARGS;
-                HANDS_Y.reset();
+                POSE.reset();
                 msg.getFloat(0) => float vision_width;
                 msg.getFloat(1) => float vision_height;
-                for (3 => int i; i < 67; i++) {
-                    if (i % 3 != 0) {
-                        HANDS_Y << msg.getFloat(i);
+                msg.getInt(2) => float num_poses;
+                for (4 => int i; i < 3 + num_poses * 52; i++) {
+                    if (i % 3 != 0) { // exclude z values
+                        POSE << msg.getFloat(i);
                     }
                 }
-                for (68 => int i; i < 129; i++) {
-                    if ((i + 2)% 3 != 0) {
-                        HANDS_Y << msg.getFloat(i);
-                    }
-                }
-                HANDS_Y << msg.getFloat(3 + 1 + 3 * 0 + 1) - msg.getFloat(3 + 1 + 3 * 9 + 1); // left palm middle z
-                <<<HANDS_Y.size()>>>;
+                <<<POSE.size()>>>;
             }
         }
         
@@ -99,14 +94,14 @@ fun void send2wek()
     
     // print
     cherr <= "  *** SENDING: \"/wek/inputs/\": ";
-    for (int i; i < HANDS_Y.size(); i++) {
-        cherr <= HANDS_Y[i] <= " ";
+    for (int i; i < POSE.size(); i++) {
+        cherr <= POSE[i] <= " ";
     }
     cherr <= IO.newline();
 
     // add each for sending
-    for (int i; i < HANDS_Y.size(); i++) {
-        HANDS_Y[i] => xmit.add;
+    for (int i; i < POSE.size(); i++) {
+        POSE[i] => xmit.add;
     }
     
     // send it

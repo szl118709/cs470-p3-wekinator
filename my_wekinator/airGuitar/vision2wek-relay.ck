@@ -27,9 +27,7 @@ OscOut xmit;
 // aim the transmitter at destination
 xmit.dest( hostname, port );
 
-// just two of the many parameters
-float MOUTH_WIDTH;
-float MOUTH_HEIGHT;
+// storage for msg
 int NUM_ARGS;
 float HANDS_Y[2];
 
